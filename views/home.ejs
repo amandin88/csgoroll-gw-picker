@@ -1,0 +1,146 @@
+<%- include('partials/header') %>
+<div class="mainContentContainer">
+	<div class="inputsFormsContainer"> 
+		<div class="inputsFormsContent">
+			<h1 class="inputsFormsTitle">Teams ranges</h1>
+
+			<div class="rangeContainer">
+				<div class="iconContainer">
+					<img class="iconContent" src="/images/CT.png">
+				</div>
+				<div class="inputsContainer">
+					<table>
+						<tr>
+							<td><h4>Min:</h4></td>
+							<td><input class="inputField" type="text" id="minTeamRangeCT" name="minTeamRangeCT" onchange='setCookie("minRangeCT", this.value);'></td>
+						</tr>
+						<tr>
+							<td><h4>Max:</h4></td>
+							<td><input class="inputField" type="text" id="maxTeamRangeCT" name="maxTeamRangeCT" onchange='setCookie("maxRangeCT", this.value);'></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="rangeContainer">
+				<div class="iconContainer">
+					<img class="iconContent" src="/images/T.png">
+				</div>
+				<div class="inputsContainer">
+					<table>
+						<tr>
+							<td><h3>Min:</h3></td>
+							<td><input class="inputField" type="text" id="minTeamRangeT" name="minTeamRangeT" onchange='setCookie("minRangeT", this.value);'></td>
+						</tr>
+						<tr>
+							<td><h3>Max:</h3></td>
+							<td><input class="inputField" type="text" id="maxTeamRangeT" name="maxTeamRangeT" onchange='setCookie("maxRangeT", this.value);'></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="rangeContainer">
+				<div class="iconContainer">
+					<img class="iconContent" src="/images/C.png">
+				</div>
+				<div class="inputsContainer">
+					<table>
+						<tr>
+							<td><h3>Min:</h3></td>
+							<td><input class="inputField" type="text" id="minTeamRangeC" name="minTeamRangeC" onchange='setCookie("minRangeC", this.value);'></td>
+						</tr>
+						<tr>
+							<td><h3>Max:</h3></td>
+							<td><input class="inputField" type="text" id="maxTeamRangeC" name="maxTeamRangeC" onchange='setCookie("maxRangeC", this.value);'></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="inputsFormsContent">
+			<h1 class="inputsFormsTitle">Sequential numbers ranges</h1>
+
+			<div class="rangeContainer">
+				<div class="iconContainer">
+					<img class="iconContent" src="/images/CT.png">
+				</div>
+				<div class="inputsContainer">
+					<table>
+						<tr>
+							<td><h4>Min:</h4></td>
+							<td><input class="inputField" type="text" id="minNumberRangeCT" name="minNumberRangeCT" onchange='setCookie("minNumberCT", this.value);'></td>
+						</tr>
+						<tr>
+							<td><h4>Max:</h4></td>
+							<td><input class="inputField" type="text" id="maxNumberRangeCT" name="maxNumberRangeCT" onchange='setCookie("maxNumberCT", this.value);'></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="rangeContainer">
+				<div class="iconContainer">
+					<img class="iconContent" src="/images/T.png">
+				</div>
+				<div class="inputsContainer">
+					<table>
+						<tr>
+							<td><h3>Min:</h3></td>
+							<td><input class="inputField" type="text" id="minNumberRangeT" name="minNumberRangeT" onchange='setCookie("minNumberT", this.value);'></td>
+						</tr>
+						<tr>
+							<td><h3>Max:</h3></td>
+							<td><input class="inputField" type="text" id="maxNumberRangeT" name="maxNumberRangeT" onchange='setCookie("maxNumberT", this.value);'></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="rangeContainer">
+				<div class="iconContainer">
+					<img class="iconContent" src="/images/C.png">
+				</div>
+				<div class="inputsContainer">
+					<table>
+						<tr>
+							<td><h3>Min:</h3></td>
+							<td><input class="inputField" type="text" id="minNumberRangeC" name="minNumberRangeC" onchange='setCookie("minNumberC", this.value);'></td>
+						</tr>
+						<tr>
+							<td><h3>Max:</h3></td>
+							<td><input class="inputField" type="text" id="maxNumberRangeC" name="maxNumberRangeC" onchange='setCookie("maxNumberC", this.value);'></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="resultsAndBtnContainer">
+		<div class="resultsContainer"> 
+			<div class=resultsContent>
+				<div class="resultLabel">Team rolled: </div>
+				<div class="resultValue" id="teamRolled" name="teamRolled">-</div>
+			</div>
+			<div class=resultsContent>
+				<div class="resultLabel">Number rolled: </div>
+				<div class="resultValue" id="numberRolled" name="numberRolled">-</div>
+			</div>
+		</div>
+
+		<div class="buttonContainer">
+				<h3>Force the generation for a team:</h3>
+				<select id="teamSelect" name="teamSelect">
+					<option value="" selected>Select a team</option>
+					<option value="Counter-Terrorists">Counter-Terrorists</option>
+					<option value="Terrorists">Terrorists</option>
+					<option value="Chickens">Chickens</option>
+				</select>
+				<h4 id="errorLog" name="errorLog"></h4>
+				<input class="generateButton" type="button" name="generateBtn" value="GENERATE" onclick="rollNumberFromRange();"/>
+		</div>
+	</div>
+</div>
+<%- include('partials/footer') %>
