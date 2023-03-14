@@ -10,6 +10,7 @@
 
 # production
 /build
+.vscode
 
 # ignore log files
 npm-debug.log*
